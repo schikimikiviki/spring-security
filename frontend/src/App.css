@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  background-color: #103f5e;
+  color: #fff;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
