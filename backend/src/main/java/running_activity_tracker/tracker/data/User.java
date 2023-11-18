@@ -17,6 +17,17 @@ public class User {
     @ElementCollection
     private Set<String> authorities;
 
+    public User(long id, String name, String password, Set<String> authorities) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.authorities = authorities;
+    }
+
+    public User(){
+
+    }
+
     public long getId() {
         return id;
     }
