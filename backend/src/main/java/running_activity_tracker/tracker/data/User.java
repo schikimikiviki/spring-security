@@ -5,21 +5,21 @@ import jakarta.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user_table")
 public class User {
 
     @Id
     @GeneratedValue
     private long id;
-    private String name;
+    private String username;
     private String password;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> authorities;
 
-    public User(long id, String name, String password, Set<String> authorities) {
+    public User(long id, String username, String password, Set<String> authorities) {
         this.id = id;
-        this.name = name;
+        this.username = username;
         this.password = password;
         this.authorities = authorities;
     }
@@ -36,12 +36,12 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {

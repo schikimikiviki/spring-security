@@ -10,8 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("messages")
 public class MessageEndpoint {
 
-    @GetMapping
-    String unauthorized (){
+    @GetMapping("unauthorized")
+    String unauthorized() {
         return "This will not be displayed because of lack of authorization";
     }
+
+    @GetMapping("authorized")
+    String authorized() {
+        return "Hello, this is authorized";
+    }
+
 }
